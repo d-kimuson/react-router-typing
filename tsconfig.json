@@ -9,7 +9,8 @@
     },
     "moduleResolution": "node",
     "outDir": "dist",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "declaration": true
   },
   "include": ["src"]
 }
