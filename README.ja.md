@@ -1,7 +1,3 @@
-# ts-boiler
+# React Router Typing
 
-[ [English](https://github.com/d-kimuson-playground/ts-boiler) | 日本語 ]
-
-- ライブラリ試したり、なにか実験するときに毎回同じような設定をするのがめんどうなのでこのリポジトリをベースに環境を作る
-- この辺りの設定の(オレオレ)ベストプラクティスも日々変わってどこを参照すれば良いか分からなくなるので、ここに貯めていく
-- ついでによく使う型パズルとかヘルパーもここに置いてく
+[ [English](https://github.com/d-kimuson/react-router-typing) | 日本語 ]

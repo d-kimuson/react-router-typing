@@ -1,3 +1,3 @@
-# ts-boiler
+# React Router Typing
 
-[ English | [日本語](https://github.com/d-kimuson-playground/ts-boiler/blob/main/README.ja.md) ]
+[ English | [日本語](https://github.com/d-kimuson/react-router-typing/blob/main/README.ja.md) ]
