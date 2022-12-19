@@ -19,7 +19,8 @@
     "test": "jest",
     "prepare:husky": "husky install",
     "prepare:git": "git config --local --add merge.ff false && git config --local --add pull.ff only",
-    "prepare": "run-p 'prepare:*'"
+    "prepare": "run-p 'prepare:*'",
+    "prepublishOnly": "yarn build"
   },
   "config": {
     "commitizen": {
