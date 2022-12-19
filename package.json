@@ -1,9 +1,23 @@
 {
   "name": "react-router-typing",
-  "version": "0.0.2",
+  "description": "Helper library to make React Router navigation type-safe",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-kimuson/react-router-typing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d-kimuson/react-router-typing/issues"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "typescript",
+    "type-safe"
+  ],
   "scripts": {
     "build": "tsc -p .",
     "typecheck": "tsc -p . --noEmit",
