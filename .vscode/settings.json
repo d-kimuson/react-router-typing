@@ -1,0 +1,36 @@
+{
+  "editor.tabSize": 2,
+  // typescript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // eslint
+  "eslint.workingDirectories": ["."],
+  "eslint.validate": ["typescript"],
+  "eslint.options": {
+    "overrideConfigFile": ".eslintrc.cjs"
+  },
+  // prettier
+  "prettier.configPath": ".prettierrc.js",
+  // autofix
+  "editor.formatOnSave": false,
+  "[typescript][javascript][jsonc][json][markdown][mdx]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // cspell
+  "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
+  // watch exclude
+  "files.watcherExclude": {
+    // default
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    // customized
+    ".cspellcache": true,
+    "**/dist": true,
+    "**/.eslintcache": true,
+    "**/server/.coverage": true,
+    "**/server/coverage": true
+  }
+}

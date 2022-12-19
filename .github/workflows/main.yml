@@ -1,0 +1,64 @@
+name: main
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.19.1"
+          cache: "yarn"
+          cache-dependency-path: yarn.lock
+
+      - name: Get Yarn Cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+        shell: bash
+
+      - name: cache yarn global cache directory
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: cache node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys: |
+            ${{ matrix.os }}-node-v${{ matrix.node }}-deps-
+
+      - name: install dependencies
+        run: |
+          yarn install --frozen-lockfile
+        shell: bash
+
+      - name: typecheck
+        run: |
+          yarn typecheck
+
+      - name: lint
+        run: |
+          yarn lint
+
+      - name: test
+        run: |
+          yarn test

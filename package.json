@@ -1,0 +1,51 @@
+{
+  "name": "react-router-typing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p .",
+    "typecheck": "tsc -p . --noEmit",
+    "lint:eslint": "eslint . --ext ts --cache",
+    "lint:prettier": "yarn run:prettier --check",
+    "lint:cspell": "cspell lint './**/*.{ts,js,json,md,yml,yaml}' --gitignore --cache",
+    "lint": "run-s 'lint:*'",
+    "fix:eslint": "yarn lint:eslint --fix",
+    "fix:prettier": "yarn run:prettier --write",
+    "fix": "run-s 'fix:*'",
+    "run:prettier": "prettier '**/*.{ts,js,json,md,yml,yaml}'",
+    "lint-staged": "lint-staged --allow-empty -r --verbose",
+    "test": "jest",
+    "prepare:husky": "husky install",
+    "prepare:git": "git config --local --add merge.ff false && git config --local --add pull.ff only",
+    "prepare": "run-p 'prepare:*'"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^1.0.2",
+    "@types/jest": "^28.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "commitizen": "^4.2.6",
+    "cspell": "^6.17.0",
+    "esbuild": "^0.16.7",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.2",
+    "jest": "^28.1.3",
+    "lint-staged": "^13.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.1",
+    "ts-jest": "^28.0.8",
+    "tsd": "^0.25.0",
+    "typescript": "^4.8.4"
+  },
+  "packageManager": "yarn@3.3.0"
+}

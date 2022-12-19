@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/strictest",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "moduleResolution": "node",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
