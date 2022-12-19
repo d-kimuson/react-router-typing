@@ -2,3 +2,5 @@
 *.cjs
 *.mjs
 *.test.ts
+
+example
