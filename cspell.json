@@ -2,20 +2,21 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "deps",
-    "esbuild",
-    "Omittable",
-    "typecheck",
-    "Uncapitalize",
-    "esbenp",
+    "autofix",
     "cschleiden",
     "dbaeumer",
-    "prettierrc",
-    "autofix",
+    "deps",
+    "esbenp",
+    "esbuild",
     "eslintcache",
     "hoge",
     "huga",
-    "makura"
+    "makura",
+    "Omittable",
+    "prettierrc",
+    "typecheck",
+    "typeof",
+    "Uncapitalize"
   ],
   "ignorePaths": ["yarn.lock"]
 }
