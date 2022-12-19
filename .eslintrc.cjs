@@ -60,6 +60,7 @@ module.exports = {
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/ban-types": "off",
     // common
     "no-console": "warn",
     "import/order": [
@@ -92,10 +93,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.type.ts", "**/*.type-test.ts"],
+      files: ["**/types.ts", "**/*.type.ts"],
       rules: {
         "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/ban-types": "off",
       },
     },
   ],

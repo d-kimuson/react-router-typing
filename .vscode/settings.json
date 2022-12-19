@@ -17,6 +17,9 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   // cspell
   "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
   // watch exclude
