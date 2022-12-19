@@ -9,7 +9,7 @@ export type AsRouteConfig<
 > = AsObjectShape<U extends { path: string } ? U : { path: string }>
 
 /**
- * @desc children のネストを解決して Union にする
+ * @desc Resolve children nesting and remap to Union
  * {
  *     readonly path: "/";
  *     readonly element: JSX.Element;
@@ -29,7 +29,7 @@ type ToRouteUnion<T extends IRoutes> = T extends ReadonlyArray<infer I>
   ? MergeChild<I>
   : never
 /**
- * @desc 使いやすい Object 形式に整形
+ * @desc Convert to object shape easy to use
  * {
  *     "/example": {
  *         path: "/example";
@@ -70,14 +70,14 @@ type MergeChild<T> = T extends {
       | MergeChild<
           {
             path: `${T["path"]}/${Children["path"]}`
-          } & (Children extends { children: any }
+          } & (Children extends { children: unknown }
             ? { children: Children["children"] }
             : {})
         >
   : T
 
 /**
- * @desc リテラルなルーティング文字列からパスパラメタを抽出する
+ * @desc Extract path parameter from literal routing string
  * @example ParsePathParams<'/nests/:nestId'> = { nestId: string }
  */
 type ParsePathParams<T extends string> = [T] extends [`${string}:${infer I1}`]

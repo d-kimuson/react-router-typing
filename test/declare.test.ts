@@ -1,4 +1,4 @@
-import type { IRoutes, AsRouteConfig } from "../src/types"
+import type { IRoutes, AsRouteConfig } from "../src/type/declare.type"
 import { TypeEq, Assert } from "../src/type/utils.type"
 import { defineRoutes } from "../src/define-routes"
 

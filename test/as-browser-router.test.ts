@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
-import { IRoutes } from "../src/types"
+import { IRoutes } from "../src/type/declare.type"
 import { asBrowserRouter } from "../src/as-browser-router"
 
 describe("as browser router", () => {

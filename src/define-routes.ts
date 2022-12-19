@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types */
 
-import type { IRoutes } from "~/types"
+import type { IRoutes } from "~/type/declare.type"
 
 /**
  * @desc
