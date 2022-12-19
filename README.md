@@ -2,14 +2,14 @@
 
 [ English | [日本語](https://github.com/d-kimuson/react-router-typing/blob/main/README.ja.md) ]
 
-react-router-typing is a helper library that makes react-router navigation type-safe. It allows type-safe routing using react-router's standard routing declarations.
+[react-router-typing](https://www.npmjs.com/package/react-router-typing) is a helper library that makes react-router navigation type-safe. It allows type-safe routing using react-router's standard routing declarations.
 
 ## Installation
 
-react-router-typing uses the plain object-based routing of createBrowserRouting and requires react-router@6.4.0 or higher.
+react-router-typing uses the plain object-based routing of [createBrowserRouter](https://reactrouter.com/en/main/routers/create-browser-router) and requires react-router@6.4.0 or higher.
 
 ```bash
-$ yarn add react-router-typing react-router-dom^6.4.0
+$ yarn add react-router-typing 'react-router-dom@^6.4.0'
 ```
 
 ## Setup
@@ -18,7 +18,7 @@ The setting method differs depending on the version of TypeScript.
 
 ### > TypeScript 4.9
 
-If the TS used in your project is 4.9 or higher, use satisfies
+If the TypeScript used in your project is 4.9 or higher, use satisfies.
 
 ```diff
 +import { AsRouteConfig, IRoutes, asBrowserRouter } from 'react-router-typing'
@@ -137,6 +137,9 @@ export const Sample: React.FC = () => {
   return null
 }
 ```
+
+That's all for the configuration and the API provided by this library.
+The entire configuration can be seen in the [example](./example/).
 
 ## Contribution
 
