@@ -26,7 +26,7 @@ module.exports = {
   testMatch: ["**/?(*.)+(test).+(ts)"],
   globals: {
     "ts-jest": {
-      tsconfig: "test/tsconfig.json",
+      tsconfig: "tsconfig.test.json",
     },
   },
   transform: {
