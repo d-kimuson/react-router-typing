@@ -1,7 +1,5 @@
 # React Router Typing
 
-[ English | [日本語](https://github.com/d-kimuson/react-router-typing/blob/main/README.ja.md) ]
-
 [react-router-typing](https://www.npmjs.com/package/react-router-typing) is a helper library that makes react-router navigation type-safe. It allows type-safe routing using react-router's standard routing declarations.
 
 ## Installation
