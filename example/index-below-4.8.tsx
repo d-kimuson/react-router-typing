@@ -31,7 +31,7 @@ const routes = defineRoutes([
       },
     ],
   },
-])
+] as const)
 
 export type RouteConfig = AsRouteConfig<typeof routes>
 

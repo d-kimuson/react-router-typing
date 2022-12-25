@@ -2,31 +2,35 @@ import { createBrowserRouter } from 'react-router-dom'
 import type { AsRouteConfig, IRoutes } from 'react-router-typing'
 import React from 'react'
 import { asBrowserRouter } from 'react-router-typing'
-
-declare const HomePage: React.FC
-declare const ExamplePage: React.FC
-declare const NestListPage: React.FC
-declare const NestDetailPage: React.FC
+import { Nav } from './nav'
 
 const routes = [
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <div>
+        <h2>Home</h2>
+        <Nav />
+      </div>
+    ),
   },
   {
     path: "/example",
-    element: <ExamplePage />,
+    element: <div>Example</div>,
   },
   {
     path: "/nests",
-    element: (
-      <NestListPage />
-    ),
     children: [
+      {
+        path: "",
+        element: (
+          <div>Nest List Page</div>
+        ),
+      },
       {
         path: ":nestId",
         element: (
-          <NestDetailPage />
+          <div>Nest Child Page</div>
         ),
       },
     ],
@@ -35,7 +39,7 @@ const routes = [
 
 export type RouteConfig = AsRouteConfig<typeof routes>
 
-const router = createBrowserRouter(asBrowserRouter(routes))
+export const router = createBrowserRouter(asBrowserRouter(routes))
 
 /**
  * createRoot(document.getElementById("root")).render(
