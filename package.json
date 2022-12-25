@@ -1,7 +1,7 @@
 {
   "name": "react-router-typing",
   "description": "Helper library to make React Router navigation type-safe",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
